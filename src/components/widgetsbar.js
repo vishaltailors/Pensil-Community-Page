@@ -4,10 +4,16 @@ import { BiDotsHorizontalRounded } from "react-icons/bi";
 import Notifications from "./widgets/notifications";
 import Communities from "./widgets/communities";
 
-const WidgetsBar = () => {
+const WidgetsBar = ({ isTablet }) => {
   return (
-    <div className="sticky top-0 flex min-w-[320px] flex-col gap-5 self-start border-l py-2 px-5">
-      <div className="flex items-center gap-2 pb-3">
+    <div
+      className={`${
+        isTablet
+          ? "w-80 bg-base-100 py-5"
+          : "sticky top-0 min-w-[270px] self-start py-2 lg:min-w-[320px]"
+      } flex flex-col gap-5 px-5`}
+    >
+      <div className="flex items-center gap-2 px-1 pb-3">
         <div className="avatar">
           <div className="mask mask-squircle w-12">
             <img src={User} alt="" />
@@ -19,11 +25,11 @@ const WidgetsBar = () => {
             <div className="text-sm">@vishaltailor</div>
           </div>
           <div className="dropdown-end dropdown">
-            <label tabindex="0">
+            <label tabIndex="0">
               <BiDotsHorizontalRounded size={22} className="cursor-pointer" />
             </label>
             <ul
-              tabindex="0"
+              tabIndex="0"
               className="dropdown-content menu rounded-box w-32 bg-base-100 shadow"
             >
               <li>

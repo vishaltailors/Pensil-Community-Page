@@ -39,10 +39,10 @@ const Members = () => {
   ];
   return (
     <div>
-      <div className="flex items-start gap-5">
+      <div className="flex flex-col items-start gap-5 sm:flex-row">
         <img
           src={Owner}
-          className="mask mask-squircle w-36 object-cover"
+          className="mask mask-squircle w-28 object-cover  lg:w-36"
           alt=""
         />
         <div className="mt-1">
@@ -73,11 +73,11 @@ const Members = () => {
       </div>
       <div className="mt-10">Community members</div>
       <hr />
-      <div className="mt-5 grid grid-cols-3 gap-5">
+      <div className="mt-5 mb-3 grid gap-5 xs:grid-cols-2 lg:grid-cols-3">
         {members.map((obj, index) => (
           <div key={index} className="flex items-center gap-3">
             <div className="avatar placeholder">
-              <div className="mask mask-squircle w-14 bg-neutral-focus text-neutral-content">
+              <div className="mask mask-squircle w-16 bg-neutral-focus text-neutral-content xs:w-14">
                 {obj.photo.length > 2 ? (
                   <img src={obj.photo} alt="" className="h-full w-full" />
                 ) : (
@@ -85,7 +85,7 @@ const Members = () => {
                 )}
               </div>
             </div>
-            <div className="font-bold">{obj.name}</div>
+            <div className="text-base font-bold leading-4">{obj.name}</div>
           </div>
         ))}
       </div>

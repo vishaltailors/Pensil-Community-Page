@@ -3,9 +3,20 @@
     transform-origin: 100% 100%;
 }
 
+.home-tabs {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    scrollbar-width: none;
+}
+
+.home-tabs::-webkit-scrollbar {
+    display: none;
+}
+
 .home-tabs .tab {
     font-size: 16px;
     font-weight: 600;
+    min-width: fit-content;
 }
 
 .home-tabs .tab.tab-active {
@@ -20,4 +31,17 @@
     position: absolute;
     top: 10px;
     left: -40px;
+}
+
+@media screen and (max-width: 1024px) {
+    .testimonial::before {
+        top: 10px;
+        left: -40px;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .testimonial::before {
+        display: none;
+    }
 }

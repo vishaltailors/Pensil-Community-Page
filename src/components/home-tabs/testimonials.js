@@ -32,7 +32,7 @@ const Testimonials = () => {
         <div key={testimonial.id} className="border-b py-7">
           <div className="flex items-start gap-3">
             <div className="avatar placeholder">
-              <div className="mask mask-squircle w-24 bg-neutral-focus text-neutral-content">
+              <div className="mask mask-squircle w-12 bg-neutral-focus text-neutral-content sm:w-20 lg:w-24">
                 {testimonial.photo.length > 2 ? (
                   <img
                     src={testimonial.photo}
@@ -44,7 +44,7 @@ const Testimonials = () => {
                 )}
               </div>
             </div>
-            <div className="mt-2 pl-10 text-lg">
+            <div className="text-sm xs:mt-2 xs:pl-10 xs:text-base lg:text-lg">
               <p className="testimonial relative">{testimonial.message}</p>
               <div className="mt-1 font-bold">- {testimonial.name}</div>
             </div>

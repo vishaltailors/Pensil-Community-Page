@@ -80,15 +80,15 @@ const Groups = () => {
     },
   ];
   return (
-    <div className="w-full px-8 py-2">
-      <div className="text-3xl font-bold">New groups</div>
-      <div className="mt-5 grid grid-cols-3 gap-5">
+    <div className="w-full border-x px-5 py-3 sm:px-8">
+      <div className="text-xl font-bold sm:text-2xl">New groups</div>
+      <div className="mt-3 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {newGroups.map((group) => (
           <GroupCard key={group.id} group={group} />
         ))}
       </div>
-      <div className="mt-10 text-3xl font-bold">Explore</div>
-      <div className="my-5 grid grid-cols-3 gap-5">
+      <div className="mt-10 text-xl font-bold sm:text-2xl">Explore</div>
+      <div className="my-3 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {discoverGroups.map((group) => (
           <GroupCard key={group.id} group={group} />
         ))}

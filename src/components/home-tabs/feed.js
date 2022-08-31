@@ -53,7 +53,7 @@ const Feed = () => {
                 {obj.time} in {obj.group}
               </span>
             </div>
-            <div className="text-xl">{obj.title}</div>
+            <div className="text-lg">{obj.title}</div>
           </div>
         </div>
       ))}

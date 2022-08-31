@@ -28,10 +28,10 @@ const FAQs = () => {
   return faqs.map((faq) => (
     <div
       key={faq.id}
-      className="collapse-arrow collapse rounded-box mb-3 border border-base-200 bg-base-100"
+      className="collapse collapse-arrow rounded-box mb-3 border border-base-200 bg-base-100"
     >
       <input type="checkbox" />
-      <div className="collapse-title text-lg font-bold">{faq.question}</div>
+      <div className="collapse-title font-bold xs:text-lg">{faq.question}</div>
       <div className="collapse-content">
         <p>➥ {faq.answer}</p>
       </div>

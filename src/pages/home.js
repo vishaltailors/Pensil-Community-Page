@@ -57,7 +57,7 @@ const Home = () => {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full border-x">
       <div className="bg-base-100">
         <img src={Banner} className="aspect-[4/1] object-cover" alt="" />
         <div className="flex gap-3">
@@ -72,17 +72,15 @@ const Home = () => {
           </div>
           <div className="mt-1 text-sm text-gray-500">Created in May, 2021</div>
         </div>
-        <div className="mt-2 flex flex-col gap-3 px-8">
-          <div className="flex items-start justify-between">
+        <div className="mt-2 flex flex-col gap-3 px-5 sm:px-8">
+          <div className="flex flex-wrap items-start justify-between gap-3">
             <div>
               <div className="text-2xl font-bold">House of talents!</div>
               <div className="text-sm text-gray-500">
                 10K members &nbsp; ● &nbsp; 20 Groups
               </div>
             </div>
-            <div>
-              <button className="btn btn-primary">Join community</button>
-            </div>
+            <button className="btn btn-primary">Join</button>
           </div>
           <p>
             We are the one who appreciate every talent. Join world's one of the
@@ -101,7 +99,7 @@ const Home = () => {
             </div>
           ))}
         </div>
-        <div className="mt-3 px-8 py-5">{loadTab()}</div>
+        <div className="mt-3 px-5 py-5 sm:px-8">{loadTab()}</div>
       </div>
     </div>
   );
