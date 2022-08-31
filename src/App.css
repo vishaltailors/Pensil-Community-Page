@@ -1,8 +1,23 @@
-.drawer {
-    height: calc(100% - 67px);
-}
-
 .collapse-arrow .collapse-title.fixed-arrow:after {
     top: 0.6rem;
     transform-origin: 100% 100%;
+}
+
+.home-tabs .tab {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.home-tabs .tab.tab-active {
+    border-bottom: 3px solid hsl(var(--p) / var(--tw-text-opacity));
+}
+
+.testimonial::before {
+    content: "\201C";
+    font-family: Arial, sans-serif;
+    font-size: 68px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    left: -40px;
 }

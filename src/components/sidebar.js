@@ -1,3 +1,4 @@
+import Logo from "../images/logo.png";
 import { BiHomeAlt } from "react-icons/bi";
 import { MdOutlineExplore, MdOutlineMessage, MdEvent } from "react-icons/md";
 
@@ -54,6 +55,12 @@ const Sidebar = () => {
     <>
       <label for="sidebar" className="drawer-overlay"></label>
       <ul className="menu w-64 overflow-y-auto bg-base-100 p-2 text-base">
+        <li className="flex text-xl font-bold">
+          <div className="w-full gap-1 px-2.5 pt-0 pb-3 hover:bg-base-100">
+            <img src={Logo} className="w-10 object-contain" />
+            Starhouse
+          </div>
+        </li>
         {menu.map((item) => (
           <li key={item.label}>
             <a>
