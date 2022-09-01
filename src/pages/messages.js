@@ -56,6 +56,11 @@ const Messages = () => {
               <div className="text-center text-2xl">
                 No conversation selected.
               </div>
+              <div className="mt-2">
+                <button className="btn btn-primary">
+                  Start new conversation
+                </button>
+              </div>
             </div>
           )}
         </div>
