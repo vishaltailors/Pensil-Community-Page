@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
+.collapse-arrow .collapse-title.fixed-arrow:after {
+    top: 0.6rem;
+    transform-origin: 100% 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.home-tabs {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    scrollbar-width: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.home-tabs::-webkit-scrollbar {
+    display: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.home-tabs .tab {
+    font-size: 16px;
+    font-weight: 600;
+    min-width: fit-content;
 }
 
-.App-link {
-  color: #61dafb;
+.home-tabs .tab.tab-active {
+    border-bottom: 3px solid hsl(var(--p) / var(--tw-text-opacity));
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.testimonial::before {
+    content: "\201C";
+    font-family: Arial, sans-serif;
+    font-size: 68px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    left: -40px;
+}
+
+/* popup  */
+.modal {
+    pointer-events: none;
+}
+
+.modal.no-close-modal {
+    pointer-events: auto;
+}
+
+.modal-box {
+    pointer-events: auto;
+}
+
+.border-div {
+    border-width: 1px;
+    border-color: hsl(var(--bc) / var(--tw-border-opacity));
+    border-radius: var(--rounded-btn, 0.5rem);
+    --tw-border-opacity: 0.2;
+}
+
+.theme-radius {
+    border-radius: var(--rounded-btn, 0.5rem);
+}
+
+@media screen and (max-width: 1024px) {
+    .testimonial::before {
+        top: 10px;
+        left: -40px;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .testimonial::before {
+        display: none;
+    }
 }
