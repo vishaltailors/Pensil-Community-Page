@@ -10,7 +10,7 @@ import Cycling from "../images/sample/groups/cycling-min.jpg";
 
 import GroupCard from "../components/group-card";
 
-const Groups = () => {
+const Groups = ({ isTab }) => {
   const newGroups = [
     {
       id: "1",
@@ -80,7 +80,11 @@ const Groups = () => {
     },
   ];
   return (
-    <div className="w-full border-x border-base-300 px-5 py-3 sm:px-8">
+    <div
+      className={`w-full ${
+        isTab ? "px-2 py-0" : "border-x px-5 py-3 sm:px-8"
+      } border-base-300 `}
+    >
       <div className="text-xl font-bold sm:text-2xl">New groups</div>
       <div className="mt-3 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {newGroups.map((group) => (

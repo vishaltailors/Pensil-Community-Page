@@ -5,6 +5,7 @@ import Feed from "../components/home-tabs/feed";
 import Members from "../components/home-tabs/members";
 import Testimonials from "../components/home-tabs/testimonials";
 import ImageCropModal from "../components/image-crop-modal";
+import Groups from "../pages/groups";
 
 const Home = () => {
   const { communityDetails, activeTab, setActiveTab } =
@@ -24,6 +25,8 @@ const Home = () => {
         return <Testimonials />;
       case "FAQs":
         return <FAQs />;
+      case "Groups":
+        return <Groups isTab={true} />;
       default:
         return null;
     }
