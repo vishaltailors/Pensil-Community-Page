@@ -29,7 +29,7 @@ const Testimonials = () => {
   return (
     <div className="mt-[-1.75rem]">
       {testimonials.map((testimonial) => (
-        <div key={testimonial.id} className="border-b py-7">
+        <div key={testimonial.id} className="border-b border-base-300 py-7">
           <div className="flex items-start gap-3">
             <div className="avatar placeholder">
               <div className="mask mask-squircle w-12 bg-neutral-focus text-neutral-content sm:w-20 lg:w-24">

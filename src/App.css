@@ -33,6 +33,30 @@
     left: -40px;
 }
 
+/* popup  */
+.modal {
+    pointer-events: none;
+}
+
+.modal.no-close-modal {
+    pointer-events: auto;
+}
+
+.modal-box {
+    pointer-events: auto;
+}
+
+.border-div {
+    border-width: 1px;
+    border-color: hsl(var(--bc) / var(--tw-border-opacity));
+    border-radius: var(--rounded-btn, 0.5rem);
+    --tw-border-opacity: 0.2;
+}
+
+.theme-radius {
+    border-radius: var(--rounded-btn, 0.5rem);
+}
+
 @media screen and (max-width: 1024px) {
     .testimonial::before {
         top: 10px;

@@ -80,7 +80,7 @@ const Groups = () => {
     },
   ];
   return (
-    <div className="w-full border-x px-5 py-3 sm:px-8">
+    <div className="w-full border-x border-base-300 px-5 py-3 sm:px-8">
       <div className="text-xl font-bold sm:text-2xl">New groups</div>
       <div className="mt-3 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {newGroups.map((group) => (

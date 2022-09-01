@@ -36,7 +36,10 @@ const Feed = () => {
   return (
     <div className="mt-[-1rem]">
       {feedData.map((obj) => (
-        <div key={obj.title} className="flex items-start gap-3 border-b py-4">
+        <div
+          key={obj.title}
+          className="flex items-start gap-3 border-b border-base-300 py-4"
+        >
           <div className="avatar placeholder">
             <div className="mask mask-squircle w-14 bg-neutral-focus text-neutral-content">
               {obj.photo.length > 2 ? (

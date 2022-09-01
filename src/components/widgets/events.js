@@ -6,29 +6,29 @@ const Events = () => {
   const events = [
     {
       id: "1",
-      title: "Instrumental melody",
+      title: "Let's rock - Music festival",
       date: "2022-08-01",
     },
     {
       id: "2",
-      title: "The home masterchef",
+      title: "Dance night",
       date: "2022-08-03",
     },
     {
       id: "3",
-      title: "Romantic singing night",
+      title: "Cooking competition",
       date: "2022-08-05",
     },
   ];
   return (
-    <div className="flex gap-2 rounded-xl bg-neutral-content px-6 py-3">
+    <div className="theme-radius flex gap-2 bg-base-200 px-6 py-3">
       <div>
         <div className="text-xs font-bold text-primary">{today}</div>
         <div className="text-3xl font-bold leading-7">{day}</div>
       </div>
-      <div className="border-l border-dashed border-gray-500 pl-2">
+      <div className="border-l border-dashed border-base-300 pl-2">
         <div className="text-xs font-bold text-primary">Events this week</div>
-        <div>
+        <div className="mt-2">
           {events.map((event) => (
             <div key={event.id} className="pb-3">
               <div className="text-sm font-bold">{event.title}</div>

@@ -17,13 +17,13 @@ const Notifications = () => {
     },
   ];
   return (
-    <div className="rounded-xl bg-neutral-content px-6 py-3">
+    <div className="theme-radius bg-base-200 px-6 py-3">
       <div className="font-bold">Recent notifications</div>
       <ul className="mt-1.5 text-sm">
         {notifications.map((notification) => (
           <li
             key={notification.id}
-            className="flex items-start gap-3 border-b border-gray-300 py-2"
+            className="flex items-start gap-3 border-b border-base-300 py-2"
           >
             <img
               src={notification.image}

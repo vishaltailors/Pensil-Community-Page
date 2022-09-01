@@ -52,7 +52,7 @@ const Navigation = () => {
 
   const location = useLocation();
   return (
-    <div className="fixed bottom-0 w-full border-t bg-base-100">
+    <div className="fixed bottom-0 w-full border-t border-base-300 bg-base-100">
       <ul className="menu rounded-box menu-horizontal w-full justify-around bg-base-100">
         {menu.map((item) => (
           <li key={item.label}>
@@ -65,7 +65,7 @@ const Navigation = () => {
           </li>
         ))}
         <li tabIndex="0">
-          <div className="dropdown-end dropdown dropdown-top p-0">
+          <div className="dropdown dropdown-end dropdown-top p-0">
             <label tabIndex="0" className="px-4 py-3">
               <MdOutlineGroups size={24} />
             </label>

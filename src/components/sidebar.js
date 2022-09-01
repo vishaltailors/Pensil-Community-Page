@@ -71,7 +71,7 @@ const Sidebar = () => {
             </Link>
           </li>
         ))}
-        <hr className="my-3" />
+        <div className="my-3 border-t border-base-300" />
         <div>
           <h3 className="hidden px-5 py-2 text-xs font-bold uppercase text-gray-500 xl:block">
             Groups

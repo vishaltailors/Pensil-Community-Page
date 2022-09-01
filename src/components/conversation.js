@@ -33,10 +33,10 @@ const Conversation = () => {
         </div>
       </div>
       <div className="flex h-[calc(100vh-250px)] flex-col-reverse md:h-[calc(100vh-150px)]">
-        <div className="text-netural mx-3 my-2 self-start rounded-xl bg-base-200 p-3">
+        <div className="mx-3 my-2 self-start rounded-xl bg-base-200 p-3 text-base-content">
           {message.message}
         </div>
-        <div className="text-netural mx-3 my-2 self-end rounded-xl bg-primary-content p-3">
+        <div className="mx-3 my-2 self-end rounded-xl bg-primary p-3 text-base-content">
           Lorem ipsum dolor sit amet.
         </div>
       </div>
@@ -44,7 +44,7 @@ const Conversation = () => {
         <input
           type="text"
           placeholder="Write a message"
-          class="input input-bordered w-full"
+          className="input input-bordered w-full"
         />
         <div className="btn btn-accent btn-circle">
           <AiOutlineSend size={24} className="ml-1" />

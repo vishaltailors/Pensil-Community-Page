@@ -7,7 +7,9 @@ const MessageList = ({ messages }) => {
   return (
     <div
       className={`${
-        isLaptop ? "w-full" : "min-w-[270px] border-r lg:min-w-[320px]"
+        isLaptop
+          ? "w-full"
+          : "min-w-[270px] border-r border-base-300 lg:min-w-[320px]"
       }`}
     >
       <div className="px-4 pt-3 text-xl font-bold sm:text-2xl">Messages</div>
@@ -15,7 +17,7 @@ const MessageList = ({ messages }) => {
         {messages.map((message) => (
           <div
             key={message.id}
-            className="flex cursor-pointer items-start gap-3 border-b p-1 p-4 py-4 hover:bg-base-200"
+            className="flex cursor-pointer items-start gap-3 border-b border-base-300 p-1 p-4 py-4 hover:bg-base-200"
             onClick={() =>
               navigate(`/messages/${message.userId}`, { state: { message } })
             }

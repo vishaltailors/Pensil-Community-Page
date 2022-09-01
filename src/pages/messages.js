@@ -45,7 +45,7 @@ const Messages = () => {
   console.log(location.pathname !== "/messages", isLaptop);
 
   return (
-    <div className="flex w-full border-x">
+    <div className="flex w-full border-x border-base-300">
       {(location.pathname === "/messages" || !isLaptop) && (
         <MessageList messages={messages} />
       )}

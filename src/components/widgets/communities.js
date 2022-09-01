@@ -17,16 +17,16 @@ const Communities = ({ title }) => {
     },
   ];
   return (
-    <div className="rounded-xl bg-neutral-content p-3">
+    <div className="theme-radius bg-base-200 p-3">
       <div className="px-3 font-bold">{title}</div>
       <div className="mt-1.5">
         {communities.map((community) => (
           <div
             key={community.id}
-            className="flex cursor-pointer items-start gap-2 rounded-xl p-2 hover:bg-base-100"
+            className="theme-radius flex cursor-pointer items-start gap-2  p-2 hover:bg-base-100"
           >
-            <div class="avatar">
-              <div class="w-12">
+            <div className="avatar">
+              <div className="w-12">
                 <img
                   src={community.logo}
                   alt=""

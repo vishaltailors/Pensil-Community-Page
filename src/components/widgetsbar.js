@@ -1,10 +1,21 @@
 import User from "../images/sample/me.jpg";
 
-import { BiDotsHorizontalRounded } from "react-icons/bi";
 import Notifications from "./widgets/notifications";
 import Communities from "./widgets/communities";
+import Events from "./widgets/events";
+
+import { BiDotsHorizontalRounded } from "react-icons/bi";
+import { useLocation } from "react-router-dom";
+import { useContext, useState } from "react";
+import EditCommunityDetails from "./widgets/editcommdetails";
+import { CommunityContext } from "../community-provider";
 
 const WidgetsBar = ({ isTablet }) => {
+  const location = useLocation();
+
+  const [editDetails, setEditDetails] = useState(false);
+  const { setActiveTab } = useContext(CommunityContext);
+
   return (
     <div
       className={`${
@@ -42,9 +53,27 @@ const WidgetsBar = ({ isTablet }) => {
           </div>
         </div>
       </div>
-      <Notifications />
-      <Communities title={"Your communities"} />
-      <Communities title={"Joined communities"} />
+      {location.pathname === "/" && !editDetails && (
+        <button
+          className="btn btn-primary"
+          onClick={() => {
+            setEditDetails(true);
+            setActiveTab("Description");
+          }}
+        >
+          Edit community details
+        </button>
+      )}
+      {editDetails ? (
+        <EditCommunityDetails setEditDetails={setEditDetails} />
+      ) : (
+        <>
+          {location.pathname === "/events" && <Events />}
+          <Notifications />
+          <Communities title={"Your communities"} />
+          <Communities title={"Joined communities"} />
+        </>
+      )}
     </div>
   );
 };
