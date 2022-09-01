@@ -12,8 +12,10 @@ import Conversation from "./components/conversation";
 import CommunityProvider from "./community-provider";
 import BannerProvider from "./banner-provider";
 
+import { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
+import { themeChange } from "theme-change";
 import "./App.css";
 
 const Routing = () => (
@@ -29,6 +31,10 @@ const Routing = () => (
 
 const App = () => {
   const isTablet = useMediaQuery({ query: "(max-width: 768px)" });
+
+  useEffect(() => {
+    themeChange(false);
+  }, []);
 
   return (
     <CommunityProvider>
